@@ -1,0 +1,30 @@
+.container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.messageBox {
+    width: 100%;
+}
+
+.input {
+    width: calc(100% - 24px);
+    font-size: 18px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.sendButton {
+    padding: 0px 12px 0px 12px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: #a7e857;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(55, 88, 15);
+}
