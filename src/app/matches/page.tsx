@@ -30,8 +30,8 @@ export default function Home() {
                         <p style={{ margin: 0 }}>Age: {match.age}</p>
                     </div>
                     <div className={styles.info}>
-                        <p>Study: {match.study}</p>
-                        <p>Interests: {match.interests.join(", ")}</p>
+                        <p>Studienfach: {match.study}</p>
+                        <p>Interessen: {match.interests.join(", ")}</p>
                     </div>
                 </div>
             ))}
