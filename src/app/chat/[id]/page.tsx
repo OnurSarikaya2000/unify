@@ -12,6 +12,7 @@ export default function Chat({ params }: { params: { id: string } }) {
     const [user, setUser] = useState<IProfile | null>(null);
     const [messages, setMessages] = useState<MessageProps[]>([]);
     const [messageText, setMessageText] = useState("");
+    const [textFieldActive, setTextFieldActive] = useState(false);
 
     const handleMessageTextChange = (
         event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -24,6 +25,7 @@ export default function Chat({ params }: { params: { id: string } }) {
         setMessages([...messages, { userId: 101, message: messageText }]);
         // Send `profile` to an API or something...
         setMessageText("");
+        setTextFieldActive(false);
     };
 
     useEffect(() => {
@@ -57,6 +59,7 @@ export default function Chat({ params }: { params: { id: string } }) {
             ...messages,
             { userId: chatUser ? chatUser.id : 0, message: messageResponse },
         ]);
+        setTextFieldActive(true);
     }
 
     return (
@@ -79,7 +82,7 @@ export default function Chat({ params }: { params: { id: string } }) {
                     <MessagesComponent messages={messages} />
                 </div>
             )}
-
+            {!textFieldActive && <p className={styles.typing}>Schreibt...</p>}
             <form className={styles.messageBox} onSubmit={handleSubmit}>
                 <label style={{ width: "100%" }} className={styles.label}>
                     <input
@@ -91,6 +94,7 @@ export default function Chat({ params }: { params: { id: string } }) {
                     />
                 </label>
                 <input
+                    disabled={!textFieldActive}
                     className={styles.sendButton}
                     value="Senden"
                     type="submit"

@@ -13,7 +13,7 @@
     margin-top: 8px;
     font-size: 18px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid #ffffff;
     padding: 8px;
     background-color: #e6e6e6;
@@ -38,7 +38,7 @@
     margin-bottom: 8px;
     height: 48px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid #ffffff;
     cursor: pointer;
 }
@@ -48,7 +48,7 @@
     margin-bottom: auto;
     border: none;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid #ffffff;
     cursor: pointer;
     padding-top: 8px;

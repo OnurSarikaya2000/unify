@@ -13,7 +13,7 @@
     font-size: 18px;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 12px;
     margin-bottom: 8px;
 }
 
@@ -21,10 +21,21 @@
     padding: 0px 12px 0px 12px;
     height: 48px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: #a7e857;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
     color: rgb(55, 88, 15);
+}
+
+.typing {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #eeeeee;
+    border-radius: 12px;
+    width: fit-content;
 }
