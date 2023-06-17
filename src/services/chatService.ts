@@ -25,16 +25,16 @@ export const createChatResponse = async (
     if (messages.length === 0) {
         prompt =
             "Hallo! Habe eine Unterhaltung mit mir. Sei folgende Persona mit folgenden Attributen" +
-            JSON.stringify(userProfile) +
-            ". Ich studiere folgendes und habe Folgende Interessen " +
             JSON.stringify(chatPartnerProfile) +
+            ". Ich studiere folgendes und habe Folgende Interessen " +
+            JSON.stringify(userProfile) +
             ". Erwähne nicht, dass du ein KI Modell bist. Fange eine Unterhaltung an. Sprich mich auf mein Stuidum oder meine Interessen an. Erwähne auch dein Studium und deine Interessen. Schreibe maximal 3 Sätze";
     } else {
         prompt =
             "Hallo! Habe eine Unterhaltung mit mir. Sei folgende Persona mit folgenden Attributen " +
-            JSON.stringify(userProfile) +
-            ". Ich studiere folgendes und habe Folgende Interessen " +
             JSON.stringify(chatPartnerProfile) +
+            ". Ich studiere folgendes und habe Folgende Interessen " +
+            JSON.stringify(userProfile) +
             ". Sei mein Gesprächspartner. Erwähne nicht, dass du ein KI Modell bist. Führe die Konversation über mein Studium oder meine Interessen weiter. Erwähne auch dein Studium und deine Interessen";
     }
 
