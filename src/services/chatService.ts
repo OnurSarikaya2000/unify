@@ -21,26 +21,38 @@ export const createChatResponse = async (
     let openai = new OpenAIApi(config);
     console.log("chatPartnerProfile", chatPartnerProfile);
     console.log("userProfile", userProfile);
-    let prompt = "";
+    let prompt =
+        "Hallo! Habe eine Unterhaltung mit mir" +
+        "Mein Vorname ist: " +
+        userProfile.firstName +
+        ". Mein Nachname ist: " +
+        userProfile.lastName +
+        ". Ich studiere " +
+        userProfile.study +
+        " und habe Folgende Interessen " +
+        userProfile.interests +
+        ". Du als AI Bot bist Person: Vorname" +
+        chatPartnerProfile.firstName +
+        ", Nachname: " +
+        chatPartnerProfile.lastName +
+        ", Alter: " +
+        chatPartnerProfile.age +
+        "Du studierst folgendes: " +
+        chatPartnerProfile.study +
+        " und hast folgende Interessen: " +
+        chatPartnerProfile.interests;
+
     if (messages.length === 0) {
-        prompt =
-            "Hallo! Habe eine Unterhaltung mit mir. Sei folgende Persona mit folgenden Attributen" +
-            JSON.stringify(chatPartnerProfile) +
-            ". Ich studiere folgendes und habe Folgende Interessen " +
-            JSON.stringify(userProfile) +
+        prompt +=
             ". Erwähne nicht, dass du ein KI Modell bist. Fange eine Unterhaltung an. Sprich mich auf mein Stuidum oder meine Interessen an. Erwähne auch dein Studium und deine Interessen. Schreibe maximal 3 Sätze";
     } else {
-        prompt =
-            "Hallo! Habe eine Unterhaltung mit mir. Sei folgende Persona mit folgenden Attributen " +
-            JSON.stringify(chatPartnerProfile) +
-            ". Ich studiere folgendes und habe Folgende Interessen " +
-            JSON.stringify(userProfile) +
+        prompt +=
             ". Sei mein Gesprächspartner. Erwähne nicht, dass du ein KI Modell bist. Führe die Konversation über mein Studium oder meine Interessen weiter. Erwähne auch dein Studium und deine Interessen";
     }
 
     var promptMessages: ChatCompletionRequestMessage[] = [];
     promptMessages.push({
-        role: ChatCompletionRequestMessageRoleEnum.Assistant,
+        role: ChatCompletionRequestMessageRoleEnum.User,
         content: prompt,
     });
 
