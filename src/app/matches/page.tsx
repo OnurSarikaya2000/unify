@@ -27,7 +27,7 @@ export default function Home() {
                         <h2 style={{ margin: 0 }}>
                             {match.firstName} {match.lastName}
                         </h2>
-                        <p style={{ margin: 0 }}>Age: {match.age}</p>
+                        <p style={{ margin: 0 }}>Alter: {match.age}</p>
                     </div>
                     <div className={styles.info}>
                         <p>Studienfach: {match.study}</p>
