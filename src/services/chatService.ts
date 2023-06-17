@@ -10,10 +10,9 @@ export const createChatResponse = async (
     chatPartnerProfile: any,
     messages: MessageProps[]
 ) => {
-    console.log("api key", process.env.NEXT_PUBLIC_OPENAI_API_KEY);
     // This hardcodes insertion of 'User-Agent'
     let config = new Configuration({
-        apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+        apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY_GPT4,
     });
 
     // Delete it
