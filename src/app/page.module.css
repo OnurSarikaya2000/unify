@@ -4,38 +4,59 @@
     margin-right: auto;
 }
 
-.card {
+.form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
+}
+
+.input {
+    margin-top: 8px;
+    font-size: 18px;
+    border: none;
     border-radius: 8px;
-    cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    border: 1px solid #ffffff;
+    padding: 8px;
+    background-color: #e6e6e6;
 }
 
-.card:hover {
-    border: 1px solid #777;
+.label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
-.infoHeader {
+.interest {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
-.infoHeaderText {
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    margin-bottom: auto;
+.button {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    cursor: pointer;
 }
 
-.image {
+.deleteInterestButton {
     margin-top: auto;
     margin-bottom: auto;
-    border-radius: 50%;
-    object-fit: cover;
+    border: none;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #e13c3c;
+    color: white;
+}
+
+.button:hover {
+    border: 1px solid #ccc;
 }

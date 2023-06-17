@@ -1,0 +1,41 @@
+.container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.card:hover {
+    border: 1px solid #777;
+}
+
+.infoHeader {
+    display: flex;
+    flex-direction: row;
+}
+
+.infoHeaderText {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.image {
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
