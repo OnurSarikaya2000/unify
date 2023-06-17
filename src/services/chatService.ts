@@ -29,7 +29,7 @@ export const createChatResponse = async (
         userProfile.lastName +
         ". Ich studiere " +
         userProfile.study +
-        " und habe Folgende Interessen " +
+        " und ich habe Folgende Interessen " +
         userProfile.interests +
         ". Du als AI Bot bist Person: Vorname" +
         chatPartnerProfile.firstName +
@@ -37,9 +37,9 @@ export const createChatResponse = async (
         chatPartnerProfile.lastName +
         ", Alter: " +
         chatPartnerProfile.age +
-        "Du studierst folgendes: " +
+        "Du als AI Bot studierst folgendes: " +
         chatPartnerProfile.study +
-        " und hast folgende Interessen: " +
+        " und du als AI Bot hast folgende Interessen: " +
         chatPartnerProfile.interests;
 
     if (messages.length === 0) {
