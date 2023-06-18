@@ -67,7 +67,7 @@ export const createChatResponse = async (
     });
 
     const chatCompletion = await openai.createChatCompletion({
-        model: "gpt-4-0613",
+        model: "gpt-3.5-turbo-0613",
         messages: promptMessages,
     });
     console.log(chatCompletion.data.choices[0].message);
